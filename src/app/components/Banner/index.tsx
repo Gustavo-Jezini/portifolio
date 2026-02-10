@@ -18,7 +18,7 @@ export function Banner() {
       <p className="text-xs">
         Sempre <Highlight>buscando</Highlight> novos desafios !
       </p>
-      <button className="bg-white-100 text-dark-blue-700 rounded px-4 py-2 text-xs font-bold shadow-md">
+      <button className="rounded bg-white-100 px-4 py-2 text-xs font-bold text-dark-blue-700 shadow-md">
         Entre em contato comigo!
       </button>
     </div>

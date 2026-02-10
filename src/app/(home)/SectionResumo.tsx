@@ -3,7 +3,7 @@ import { Highlight } from '../components/HighlightText'
 
 export function SectionResumo() {
   return (
-    <section className="bg-white-300 flex w-screen flex-col gap-6 px-6">
+    <section className="flex w-screen flex-col gap-6 bg-white-300 px-6">
       <h2>
         <Highlight italic font="font-semibold">
           {'<Dev.Resumo>'}

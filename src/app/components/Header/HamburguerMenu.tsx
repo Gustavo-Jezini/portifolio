@@ -29,12 +29,12 @@ export function HamburguerMenu() {
         )}
       </button>
       {open && (
-        <nav className="text-dark-blue-700 bg-white-200 fixed h-screen w-screen font-medium">
+        <nav className="fixed h-screen w-screen bg-white-200 font-medium text-dark-blue-700">
           <ul className="mt-12 flex flex-col items-center justify-center gap-8">
             {items.map((item) => (
               <li
                 key={item.name}
-                className="bg-white-400 flex w-3/4 justify-center rounded px-2 py-4 shadow-lg"
+                className="flex w-3/4 justify-center rounded bg-white-400 px-2 py-4 shadow-lg"
               >
                 <Link href={item.link}>{item.name}</Link>
               </li>

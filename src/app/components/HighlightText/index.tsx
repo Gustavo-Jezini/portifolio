@@ -11,7 +11,7 @@ export function Highlight({
 }: HighlightProps) {
   return (
     <span
-      className={`text-dark-blue-700 font-bold ${italic ? 'italic' : ''} ${font} `}
+      className={`font-bold text-dark-blue-700 ${italic ? 'italic' : ''} ${font} `}
     >
       {children}
     </span>
