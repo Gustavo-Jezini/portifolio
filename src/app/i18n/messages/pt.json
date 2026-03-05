@@ -1,0 +1,19 @@
+{
+  "app": {
+    "name": "Gustavo Jezini"
+  },
+  "nav": {
+    "home": "Início",
+    "resume": "Currículo",
+    "contact": "Contato",
+    "language": {
+      "label": "Idioma",
+      "en": "EN",
+      "pt": "PT"
+    }
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "contact": "Entrar em contato"
+  }
+}

@@ -8,20 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'banner-stars': "url('/src/assets/cover-image-portifolio.jpg')",
-      },
+      backgroundImage: {},
       colors: {
-        'dark-blue-800': '#00272d',
-        'dark-blue-700': '#134647',
-        'dark-blue-600': '#0c7e7e',
-        'white-100': '#f8f9f6',
-        'white-200': '#f2f3ec',
-        'white-300': '#ebeee3',
-        'white-400': '#e5e8da',
-        white: '#ffffff',
-        black: '#000706',
-        beje: '#bfac8b',
+        primary: '#E1D4C2',
+        muted: '#BEB5A9',
+        secondary: '#A78D78',
+        accent: '#6E473B',
+        background: '#291C0E',
       },
     },
   },

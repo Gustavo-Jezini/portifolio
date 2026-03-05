@@ -1,9 +1,19 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Inconsolata } from 'next/font/google'
 import './globals.css'
-import { Header } from './components/Header'
+import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
+import { I18nProvider } from './i18n/I18nProvider'
+import { HtmlLangSync } from './i18n/HtmlLangSync'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+// This app uses client state (localStorage) for language switching.
+// Avoid prerender/export errors by opting into dynamic rendering.
+export const dynamic = 'force-dynamic'
+
+const inconsolata = Inconsolata({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'Gustavo Jezini - Portifólio',
@@ -17,9 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
-        <Header />
-        <main className="pt-12">{children}</main>
+      <body className={inconsolata.className}>
+        <I18nProvider>
+          <HtmlLangSync />
+          <div className="min-h-dvh bg-background text-primary">
+            <Navbar />
+            <main className="pt-20">{children}</main>
+            <Footer />
+          </div>
+        </I18nProvider>
       </body>
     </html>
   )
