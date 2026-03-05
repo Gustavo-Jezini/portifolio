@@ -20,15 +20,15 @@ export function Card({ title, description, tags = [], href }: CardProps) {
           }
         : {})}
       className={cn(
-        'border-accent/40 bg-background/50 hover:border-primary/40 hover:bg-background/70 group flex flex-col gap-4 rounded-xl border p-5 transition',
+        'group flex flex-col gap-4 rounded-xl border border-accent/40 bg-background/50 p-5 transition hover:border-primary/40 hover:bg-background/70',
         href && 'cursor-pointer',
       )}
     >
       <div className="space-y-1">
-        <h3 className="text-primary group-hover:text-primary text-base font-semibold">
+        <h3 className="text-base font-semibold text-primary group-hover:text-primary">
           {title}
         </h3>
-        <p className="text-muted text-sm leading-relaxed">{description}</p>
+        <p className="text-sm leading-relaxed text-muted">{description}</p>
       </div>
 
       {tags.length > 0 ? (
@@ -36,7 +36,7 @@ export function Card({ title, description, tags = [], href }: CardProps) {
           {tags.map((t) => (
             <span
               key={t}
-              className="border-accent/50 bg-accent/20 text-primary rounded-full border px-2.5 py-1 text-xs"
+              className="rounded-full border border-accent/50 bg-accent/20 px-2.5 py-1 text-xs text-primary"
             >
               {t}
             </span>

@@ -16,9 +16,9 @@ export function Navbar() {
   }
 
   return (
-    <header className="border-accent/40 bg-background/80 fixed inset-x-0 top-0 z-50 border-b backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-accent/40 bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="text-primary font-semibold tracking-tight">
+        <Link href="/" className="font-semibold tracking-tight text-primary">
           {t('app.name', 'Gustavo Jezini')}
         </Link>
 
@@ -30,7 +30,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleLocale}
-            className="text-primary/80 hover:bg-accent/30 hover:text-primary focus-visible:ring-primary/60 rounded-md px-3 py-2 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2"
+            className="rounded-md px-3 py-2 text-sm font-medium text-primary/80 transition hover:bg-accent/30 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
             aria-label={t('nav.language.label', 'Language')}
             title={t('nav.language.label', 'Language')}
           >

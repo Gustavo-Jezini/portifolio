@@ -22,15 +22,15 @@ export function Section({
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-8 max-w-3xl">
           {eyebrow ? (
-            <p className="text-secondary text-xs font-semibold uppercase tracking-widest">
+            <p className="text-xs font-semibold uppercase tracking-widest text-secondary">
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="text-primary mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-primary sm:text-3xl">
             {title}
           </h2>
           {description ? (
-            <p className="text-muted mt-3 text-sm leading-relaxed">
+            <p className="mt-3 text-sm leading-relaxed text-muted">
               {description}
             </p>
           ) : null}

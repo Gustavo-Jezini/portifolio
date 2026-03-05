@@ -31,7 +31,7 @@ export function ContactForm() {
 
   return (
     <form
-      className="border-accent/40 bg-background/40 space-y-4 rounded-2xl border p-6"
+      className="space-y-4 rounded-2xl border border-accent/40 bg-background/40 p-6"
       onSubmit={(e) => {
         e.preventDefault()
         window.location.href = mailtoHref
@@ -39,35 +39,35 @@ export function ContactForm() {
     >
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="space-y-2">
-          <span className="text-primary text-sm font-medium">Nome</span>
+          <span className="text-sm font-medium text-primary">Nome</span>
           <input
             value={form.name}
             onChange={(e) => setForm((s) => ({ ...s, name: e.target.value }))}
             placeholder="Seu nome"
-            className="border-accent/50 bg-background text-primary placeholder:text-muted/60 focus:ring-primary/60 h-11 w-full rounded-md border px-3 text-sm focus:outline-none focus:ring-2"
+            className="h-11 w-full rounded-md border border-accent/50 bg-background px-3 text-sm text-primary placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/60"
           />
         </label>
 
         <label className="space-y-2">
-          <span className="text-primary text-sm font-medium">Email</span>
+          <span className="text-sm font-medium text-primary">Email</span>
           <input
             type="email"
             value={form.email}
             onChange={(e) => setForm((s) => ({ ...s, email: e.target.value }))}
             placeholder="voce@exemplo.com"
-            className="border-accent/50 bg-background text-primary placeholder:text-muted/60 focus:ring-primary/60 h-11 w-full rounded-md border px-3 text-sm focus:outline-none focus:ring-2"
+            className="h-11 w-full rounded-md border border-accent/50 bg-background px-3 text-sm text-primary placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/60"
           />
         </label>
       </div>
 
       <label className="space-y-2">
-        <span className="text-primary text-sm font-medium">Mensagem</span>
+        <span className="text-sm font-medium text-primary">Mensagem</span>
         <textarea
           value={form.message}
           onChange={(e) => setForm((s) => ({ ...s, message: e.target.value }))}
           placeholder="Como posso te ajudar?"
           rows={6}
-          className="border-accent/50 bg-background text-primary placeholder:text-muted/60 focus:ring-primary/60 w-full resize-none rounded-md border px-3 py-3 text-sm focus:outline-none focus:ring-2"
+          className="w-full resize-none rounded-md border border-accent/50 bg-background px-3 py-3 text-sm text-primary placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-primary/60"
         />
       </label>
 
@@ -77,13 +77,13 @@ export function ContactForm() {
         </Button>
         <a
           href={mailtoHref}
-          className="text-primary/80 hover:text-primary text-sm underline-offset-4 hover:underline"
+          className="text-sm text-primary/80 underline-offset-4 hover:text-primary hover:underline"
         >
           Abrir no cliente de email
         </a>
       </div>
 
-      <p className="text-muted text-xs">
+      <p className="text-xs text-muted">
         Dica: troque o endereço de destino em `ContactForm.tsx`.
       </p>
     </form>

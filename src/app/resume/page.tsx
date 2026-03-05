@@ -35,13 +35,13 @@ export default function ResumePage() {
     <div className="mx-auto max-w-6xl px-4 py-14">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-3xl">
-          <p className="text-secondary text-xs font-semibold uppercase tracking-widest">
+          <p className="text-xs font-semibold uppercase tracking-widest text-secondary">
             Currículo
           </p>
-          <h1 className="text-primary mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
             Experiências
           </h1>
-          <p className="text-muted mt-3 text-sm leading-relaxed">
+          <p className="mt-3 text-sm leading-relaxed text-muted">
             Timeline em formato parecido com o LinkedIn. Edite os itens para
             refletir sua trajetória.
           </p>
@@ -56,24 +56,24 @@ export default function ResumePage() {
         {experiences.map((exp) => (
           <div
             key={`${exp.company}-${exp.period}-${exp.role}`}
-            className="border-accent/40 bg-background/40 rounded-xl border p-6"
+            className="rounded-xl border border-accent/40 bg-background/40 p-6"
           >
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
               <div>
-                <p className="text-primary text-base font-semibold">
+                <p className="text-base font-semibold text-primary">
                   {exp.role}
                 </p>
-                <p className="text-muted text-sm">{exp.company}</p>
+                <p className="text-sm text-muted">{exp.company}</p>
               </div>
-              <p className="text-secondary text-xs font-medium">{exp.period}</p>
+              <p className="text-xs font-medium text-secondary">{exp.period}</p>
             </div>
 
-            <p className="text-muted mt-4 text-sm leading-relaxed">
+            <p className="mt-4 text-sm leading-relaxed text-muted">
               {exp.summary}
             </p>
 
             {exp.highlights?.length ? (
-              <ul className="text-muted mt-4 list-disc space-y-2 pl-5 text-sm">
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-muted">
                 {exp.highlights.map((h) => (
                   <li key={h}>{h}</li>
                 ))}
@@ -83,17 +83,17 @@ export default function ResumePage() {
         ))}
       </div>
 
-      <div className="border-accent/40 bg-background/40 mt-10 rounded-2xl border p-6">
-        <p className="text-primary text-sm font-semibold">Atalhos</p>
+      <div className="mt-10 rounded-2xl border border-accent/40 bg-background/40 p-6">
+        <p className="text-sm font-semibold text-primary">Atalhos</p>
         <div className="mt-4 flex flex-wrap gap-3">
           <Link
-            className="text-primary/80 hover:text-primary text-sm underline-offset-4 hover:underline"
+            className="text-sm text-primary/80 underline-offset-4 hover:text-primary hover:underline"
             href="/#projetos"
           >
             Ver projetos
           </Link>
           <Link
-            className="text-primary/80 hover:text-primary text-sm underline-offset-4 hover:underline"
+            className="text-sm text-primary/80 underline-offset-4 hover:text-primary hover:underline"
             href="/contato"
           >
             Contato
