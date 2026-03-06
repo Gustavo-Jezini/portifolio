@@ -6,6 +6,8 @@ import { Footer } from './components/Footer'
 import { I18nProvider } from './i18n/I18nProvider'
 import { HtmlLangSync } from './i18n/HtmlLangSync'
 import en from './i18n/messages/en.json'
+import { cookies } from 'next/headers'
+import { isLocale, type Locale } from './i18n/i18n'
 
 // This app uses client state (localStorage) for language switching.
 // Avoid prerender/export errors by opting into dynamic rendering.
@@ -26,10 +28,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const cookieStore = cookies()
+  const cookieLocale = cookieStore.get('locale')?.value
+  const initialLocale: Locale = isLocale(cookieLocale ?? '')
+    ? (cookieLocale as Locale)
+    : 'en'
+
   return (
-    <html lang="en">
+    <html lang={initialLocale}>
       <body className={inconsolata.className}>
-        <I18nProvider>
+        <I18nProvider initialLocale={initialLocale}>
           <HtmlLangSync />
           <div className="min-h-dvh bg-background text-primary">
             <Navbar />

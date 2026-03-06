@@ -26,6 +26,7 @@
   "home": {
     "hero": {
       "kicker": "Developer",
+      "available": "Open to opportunities",
       "title": "Hi, I'm Gustavo.",
       "subtitle": "Full Stack Software Engineer with 4+ years of experience.",
       "description": "I design and implement scalable systems across financial and e-commerce domains, with a strong focus on automation, cloud-native architecture, and CI/CD.",

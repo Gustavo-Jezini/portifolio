@@ -29,6 +29,7 @@
       "title": "Oi, eu sou o Gustavo.",
       "subtitle": "Engenheiro de Software Full Stack com mais de 4 anos de experiência.",
       "description": "Eu desenho e implemento sistemas escaláveis nos domínios financeiro e e-commerce, com forte foco em automação, arquitetura cloud-native e CI/CD.",
+      "available": "Aberto a oportunidades",
       "cta": {
         "projects": "Ver projetos",
         "contact": "Entre em contato"
