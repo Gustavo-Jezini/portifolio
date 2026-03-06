@@ -105,7 +105,12 @@
           "title": "AI Resume Analyzer",
           "description": "Aplicação que analisa currículos comparando com descrições de vagas específicas, avaliando compatibilidade e alinhamento com ATS, com uma nota de 0–100 e sugestões de melhoria.",
           "repo": "ai-resume-analyzer",
-          "tech": ["React", "React Router", "Puter.js", "IA"]
+          "tech": [
+            "React",
+            "React Router",
+            "Puter.js",
+            "IA"
+          ]
         },
         {
           "title": "AI Agents",
@@ -178,23 +183,52 @@
   "contact": {
     "page": {
       "kicker": "Contato",
-      "title": "Me envie uma mensagem",
-      "description": "Este formulário abre seu cliente de email com o conteúdo preenchido (sem backend)."
+      "title": "Vamos conversar",
+      "description": "Quer falar sobre uma vaga, um projeto freelance ou só dar um oi? Me envie uma mensagem e eu respondo o quanto antes.",
+      "cards": {
+        "fastTitle": "Contexto rápido para recrutadores",
+        "fastDescription": "Compartilhe a vaga, stack e detalhes de local/remoto. Eu respondo com disponibilidade e próximos passos.",
+        "noBackendTitle": "Formulário sem backend",
+        "noBackendDescription": "Vai abrir seu cliente de email com uma mensagem pré-preenchida (mailto)."
+      }
     },
     "form": {
       "to": "gustavojezini@gmail.com",
       "subjectPrefix": "Contato via portfólio",
       "anonymous": "Anônimo",
       "fields": {
-        "name": { "label": "Nome", "placeholder": "Seu nome" },
-        "email": { "label": "Email", "placeholder": "voce@exemplo.com" },
-        "message": { "label": "Mensagem", "placeholder": "Como posso ajudar?" }
+        "name": {
+          "label": "Nome",
+          "placeholder": "Seu nome"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "voce@exemplo.com"
+        },
+        "message": {
+          "label": "Mensagem",
+          "placeholder": "Como posso ajudar?"
+        }
       },
       "actions": {
-        "submit": "Enviar email",
-        "openClient": "Abrir no cliente de email"
+        "submit": "Abrir rascunho de email",
+        "openClient": "Visualizar link mailto",
+        "submitting": "Abrindo…",
+        "copyEmail": "Copiar email",
+        "copied": "Copiado!"
       },
-      "hint": "Dica: altere o endereço de destino em `ContactForm.tsx`."
+      "hint": "Dica: altere o endereço de destino em `ContactForm.tsx`.",
+      "title": "Enviar um email",
+      "subtitle": "Isso vai abrir seu cliente de email com assunto e mensagem pré-preenchidos.",
+      "badge": "Feito para recrutadores",
+      "messageHint": "Dica: inclua vaga/empresa, stack e prazo.",
+      "validation": {
+        "nameRequired": "Por favor, informe seu nome.",
+        "emailRequired": "Por favor, informe seu email.",
+        "emailInvalid": "Por favor, informe um email válido.",
+        "messageRequired": "Por favor, escreva uma mensagem.",
+        "messageMinLength": "Um pouco mais de detalhe ajuda (mín. 20 caracteres)."
+      }
     }
   },
   "resume": {
