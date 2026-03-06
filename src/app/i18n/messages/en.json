@@ -161,9 +161,17 @@
       "kicker": "Resume",
       "title": "Experience",
       "description": "Timeline similar to LinkedIn. Edit the entries to match your journey.",
-      "ctaContact": "Get in touch"
+      "ctaContact": "Get in touch",
+      "ctaHint": "Quick reply: LinkedIn message or email works best."
+    },
+    "badges": {
+      "remote": "Remote-friendly",
+      "team": "Team player",
+      "ownership": "Ownership"
     },
     "experience": {
+      "title": "Career highlights",
+      "subtitle": "Latest roles first",
       "items": [
         {
           "role": "Back-end Software Developer",
@@ -205,6 +213,12 @@
           ]
         }
       ]
+    },
+    "tips": {
+      "title": "How I create impact",
+      "item1": "Clear communication and documentation that speeds up teams.",
+      "item2": "Incremental delivery with quality gates (tests, reviews, CI).",
+      "item3": "Ownership mindset: I unblock problems and push outcomes."
     },
     "shortcuts": {
       "title": "Shortcuts",
