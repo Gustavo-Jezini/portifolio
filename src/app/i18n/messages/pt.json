@@ -2,8 +2,8 @@
   "app": {
     "name": "Gustavo Jezini",
     "meta": {
-      "title": "Gustavo Jezini - Portifólio",
-      "description": "Portifólio de Gustavo Jezini"
+      "title": "Gustavo Jezini - Portfólio",
+      "description": "Portfólio do Gustavo Jezini"
     }
   },
   "nav": {
@@ -18,7 +18,7 @@
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
-    "contact": "Entrar em contato",
+    "contact": "Entre em contato",
     "social": {
       "linkedin": "LinkedIn"
     }
@@ -26,166 +26,223 @@
   "home": {
     "hero": {
       "kicker": "Desenvolvedor",
-      "title": "Olá, eu sou o Gustavo.",
-      "subtitle": "Eu construo experiências web com foco em performance e UX.",
-      "description": "Aqui você encontra um resumo dos meus projetos, certificados e experiência profissional. Sinta-se à vontade para entrar em contato.",
+      "title": "Oi, eu sou o Gustavo.",
+      "subtitle": "Engenheiro de Software Full Stack com mais de 4 anos de experiência.",
+      "description": "Eu desenho e implemento sistemas escaláveis nos domínios financeiro e e-commerce, com forte foco em automação, arquitetura cloud-native e CI/CD.",
       "cta": {
         "projects": "Ver projetos",
-        "contact": "Entrar em contato"
+        "contact": "Entre em contato"
       },
       "highlights": {
         "title": "Destaques",
         "items": [
-          "Next.js + React + TypeScript",
-          "Tailwind, design system leve e consistente",
-          "Integrações com APIs, auth e banco de dados"
+          "Node.js (Express, NestJS, Fastify) + TypeScript",
+          "React + Next.js",
+          "MongoDB + PostgreSQL, Docker, CI/CD (GitHub Actions)"
         ],
-        "note": "(Edite este bloco para colocar suas especialidades reais.)"
+        "note": ""
       }
     },
     "about": {
-      "kicker": "Sobre mim",
-      "title": "Um pouco da minha história",
-      "description": "Escreva aqui uma breve descrição: como você começou na área, em que tipo de projeto gosta de atuar e quais valores guiam seu trabalho.",
+      "kicker": "Sobre",
+      "title": "Um pouco sobre mim",
+      "description": "Engenheiro de Software Full Stack com mais de 4 anos de experiência no ecossistema Node.js (Express, NestJS, Fastify) e React / Next.js, com especialização em arquiteturas Cloud-Native (Azure/AWS) e fluxos de CI/CD usando GitHub Actions.",
       "cards": [
         {
-          "title": "Foco em produto",
-          "desc": "Participo do processo do problema à entrega, validando com usuários e stakeholders."
+          "title": "Arquitetura e migrações",
+          "desc": "Liderei a migração de um monólito baseado em EJS para uma arquitetura desacoplada NestJS + React com containerização Docker para melhorar manutenibilidade e escalabilidade."
         },
         {
-          "title": "Qualidade",
-          "desc": "Boas práticas, lint, testes e revisão para manter o código legível."
+          "title": "Automação e eficiência",
+          "desc": "Automatizei fluxos e coleta de dados, alcançando até 100% de redução do esforço manual e ganhos de até 60% em eficiência operacional."
         },
         {
-          "title": "Aprendizado contínuo",
-          "desc": "Sempre estudando para escrever código melhor e acompanhar o ecossistema."
+          "title": "Entrega orientada a dados",
+          "desc": "Construí dashboards com SQL e métricas em tempo real para apoiar decisões orientadas a dados em casos de uso de e-commerce e finanças."
         }
       ]
     },
     "projects": {
       "kicker": "Projetos",
-      "title": "Alguns projetos que eu construí",
-      "description": "É um grid com 6 cards. Troque o título, descrição, tecnologias e links.",
+      "title": "Algumas coisas que eu construí",
+      "description": "Alguns projetos selecionados do meu trabalho recente.",
       "repoCta": "Ver repositório →",
-  "itemFallbackTitle": "Projeto",
-  "itemFallbackDescription": "Descreva o problema, sua solução e o resultado.",
-      "githubBaseUrl": "https://github.com/SEU_USUARIO",
+      "itemFallbackTitle": "Projeto",
+      "itemFallbackDescription": "",
+      "githubBaseUrl": "https://github.com/gustavo-jezini",
       "items": [
         {
-          "title": "Projeto 1",
-          "description": "Descreva o problema, sua solução e o resultado.",
-          "tech": ["Next.js", "TypeScript", "Tailwind"]
+          "title": "USA Stock Market",
+          "description": "Projeto para monitorar ativos do mercado de ações dos EUA e gerar emails automatizados com notícias financeiras a partir da API Finnhub.io, usando Inngest para workflows e Gemini para geração de conteúdo com IA.",
+          "repo": "stock-tracker",
+          "tech": [
+            "Next.js",
+            "MongoDB",
+            "Mongoose",
+            "Better Auth",
+            "Finnhub API",
+            "Inngest",
+            "Gemini API",
+            "Nodemailer"
+          ]
         },
         {
-          "title": "Projeto 2",
-          "description": "Descreva o problema, sua solução e o resultado.",
-          "tech": ["React", "Node.js", "Express"]
+          "title": "Sports Socket",
+          "description": "API Node.js focada em atualizações em tempo real de partidas esportivas usando WebSockets como o principal canal de eventos e REST onde o request/response síncrono faz sentido (bootstrap, listagem e criação de partidas).",
+          "repo": "sports-socket",
+          "tech": [
+            "Node.js",
+            "WebSocket",
+            "REST",
+            "PostgreSQL",
+            "Drizzle ORM",
+            "Zod",
+            "Docker"
+          ]
         },
         {
-          "title": "Projeto 3",
-          "description": "Descreva o problema, sua solução e o resultado.",
-          "tech": ["TypeScript", "PostgreSQL", "Prisma"]
+          "title": "AI Resume Analyzer",
+          "description": "Aplicação que analisa currículos comparando com descrições de vagas específicas, avaliando compatibilidade e alinhamento com ATS, com uma nota de 0–100 e sugestões de melhoria.",
+          "repo": "ai-resume-analyzer",
+          "tech": ["React", "React Router", "Puter.js", "IA"]
         },
         {
-          "title": "Projeto 4",
-          "description": "Descreva o problema, sua solução e o resultado.",
-          "tech": ["Next.js", "Auth", "API"]
-        },
-        {
-          "title": "Projeto 5",
-          "description": "Descreva o problema, sua solução e o resultado.",
-          "tech": ["UI", "Design", "Acessibilidade"]
-        },
-        {
-          "title": "Projeto 6",
-          "description": "Descreva o problema, sua solução e o resultado.",
-          "tech": ["CI", "Testes", "Deploy"]
+          "title": "AI Agents",
+          "description": "Agente de IA que responde perguntas com base em dados armazenados em um banco vetorial: transcreve áudio, divide em chunks, gera embeddings por chunk, armazena com um classId e recupera o contexto mais relevante para responder perguntas sobre uma aula específica ou uma classe gravada.",
+          "repo": "ai-agents",
+          "tech": [
+            "Fastify",
+            "PostgreSQL",
+            "Drizzle ORM",
+            "Banco vetorial",
+            "Docker",
+            "Zod"
+          ]
         }
       ]
     },
     "certificates": {
       "kicker": "Certificados",
       "title": "Certificações e credenciais",
-      "description": "Adicione links para as credenciais (Alura, Coursera, Rocketseat, etc.).",
+      "description": "Certificações e especializações selecionadas.",
       "cta": "Ver credencial →",
       "items": [
-        { "title": "Certificado 1", "org": "Instituição", "href": "https://www.your-credential-link.com" },
-        { "title": "Certificado 2", "org": "Instituição", "href": "https://www.your-credential-link.com" },
-        { "title": "Certificado 3", "org": "Instituição", "href": "https://www.your-credential-link.com" },
-        { "title": "Certificado 4", "org": "Instituição", "href": "https://www.your-credential-link.com" }
+        {
+          "title": "Inglês",
+          "org": "Cambly",
+          "href": "http://www.cambly.com/en/certificate/verify/f7cfb464"
+        },
+        {
+          "title": "IA Generativa com AWS",
+          "org": "AWS + Trybe",
+          "href": "https://www.betrybe.com/badges/4A2FD70CBC59"
+        },
+        {
+          "title": "Agentes de IA com Gemini",
+          "org": "Rocketseat",
+          "href": "https://app.rocketseat.com.br/certificates/8d76eeeb-378d-41c9-97e3-051a413d4555"
+        },
+        {
+          "title": "Desenvolvimento Full Stack",
+          "org": "Trybe",
+          "href": "https://www.credential.net/ef10b27a-6a50-4a17-acc6-ca7efb4fc009#acc.3fWV8Ghr"
+        }
       ]
     },
     "education": {
       "kicker": "Educação",
-      "title": "Formação acadêmica e cursos",
-      "description": "Mostre sua faculdade e um curso relevante. Você pode adicionar mais entradas quando quiser.",
+      "title": "Formação e cursos",
+      "description": "Formação acadêmica e treinamento.",
       "items": [
         {
-          "title": "Faculdade",
-          "subtitle": "Nome do curso • Nome da instituição",
-          "period": "2022 — 2026"
+          "title": "Univesp",
+          "subtitle": "Bacharelado em Tecnologia da Informação",
+          "period": "2024 — 2026"
         },
         {
-          "title": "Curso",
-          "subtitle": "Nome do curso • Plataforma",
-          "period": "Carga horária / Ano"
+          "title": "Trybe",
+          "subtitle": "Desenvolvimento de Software",
+          "period": "2021 — 2022"
         }
       ]
     },
     "contact": {
       "title": "Vamos conversar?",
-      "description": "Se você tem uma vaga, freelas ou quer discutir um projeto, me chama.",
+      "description": "Se você tem uma vaga ou um projeto, me chama.",
       "emailLabel": "Email",
-      "emailValue": "seuemail@exemplo.com",
-      "cta": "Ir para o formulário"
+      "emailValue": "gustavojezini@gmail.com",
+      "cta": "Abrir formulário de contato"
     }
   },
   "contact": {
     "page": {
       "kicker": "Contato",
       "title": "Me envie uma mensagem",
-      "description": "Este formulário abre seu cliente de email com os dados preenchidos (sem backend)."
+      "description": "Este formulário abre seu cliente de email com o conteúdo preenchido (sem backend)."
     },
     "form": {
-      "to": "seuemail@exemplo.com",
+      "to": "gustavojezini@gmail.com",
       "subjectPrefix": "Contato via portfólio",
       "anonymous": "Anônimo",
       "fields": {
         "name": { "label": "Nome", "placeholder": "Seu nome" },
         "email": { "label": "Email", "placeholder": "voce@exemplo.com" },
-        "message": { "label": "Mensagem", "placeholder": "Como posso te ajudar?" }
+        "message": { "label": "Mensagem", "placeholder": "Como posso ajudar?" }
       },
       "actions": {
         "submit": "Enviar email",
         "openClient": "Abrir no cliente de email"
       },
-      "hint": "Dica: troque o endereço de destino em `ContactForm.tsx`."
+      "hint": "Dica: altere o endereço de destino em `ContactForm.tsx`."
     }
   },
   "resume": {
     "page": {
       "kicker": "Currículo",
-      "title": "Experiências",
-      "description": "Timeline em formato parecido com o LinkedIn. Edite os itens para refletir sua trajetória.",
-      "ctaContact": "Entrar em contato"
+      "title": "Experiência",
+      "description": "Linha do tempo semelhante ao LinkedIn. Edite as entradas para refletir sua trajetória.",
+      "ctaContact": "Entre em contato"
     },
     "experience": {
       "items": [
         {
-          "role": "Cargo / Função",
-          "company": "Empresa",
-          "period": "2024 — Atual",
-          "summary": "Descreva aqui o que você faz, o contexto do produto e o impacto do seu trabalho.",
+          "role": "Desenvolvedor de Software Back-end",
+          "company": "Sossego",
+          "period": "Emprego atual",
+          "summary": "Desenvolvi e otimizei bots de automação, arquitetei workflows orientados a eventos consumindo APIs GraphQL, integrei microsserviços em Python para conciliar dados entre MongoDB e PostgreSQL e implementei pipelines de CI/CD com GitHub Actions.",
           "highlights": [
-            "Resultados mensuráveis (ex: -20% tempo de carregamento, +15% conversão)",
-            "Tecnologias, responsabilidades, colaboração"
+            "Desenvolvi e otimizei bots de automação usando Node.js e Playwright, eliminando 100% do esforço manual de coleta de dados na web.",
+            "Arquitetei workflows orientados a eventos consumindo APIs GraphQL para disparar processos core do negócio em tempo real.",
+            "Integrei microsserviços e DAGs em Python para conciliar dados entre MongoDB e PostgreSQL, garantindo consistência total do sistema.",
+            "Implementei pipelines de CI/CD com GitHub Actions para validação de código e deploy contínuo, estruturando fluxos de Pull Request com revisões obrigatórias e controle de qualidade.",
+            "Usei o GitHub Copilot como ferramenta de produtividade para desenvolvimento e code review."
           ]
         },
         {
-          "role": "Cargo anterior",
-          "company": "Empresa",
-          "period": "2022 — 2024",
-          "summary": "Descreva o escopo: time, projeto, problemas resolvidos e o que você aprendeu."
+          "role": "Desenvolvedor de Software Full Stack",
+          "company": "Avantsoft",
+          "period": "04/2024 – 02/2025",
+          "summary": "Liderei a migração de um monólito em EJS para uma arquitetura pronta para a nuvem usando NestJS e React com containerização Docker, construí dashboards baseados em SQL com métricas de produto em tempo real e desenhei APIs REST incluindo cobrança recorrente e monitoramento de eventos críticos.",
+          "highlights": [
+            "Liderei a migração de um monólito em EJS para uma arquitetura pronta para a nuvem usando NestJS e React com containerização Docker, simplificando o deploy e aumentando a escalabilidade horizontal.",
+            "Estruturei dashboards analíticos com SQL e métricas de produto em tempo real, viabilizando insights financeiros orientados a dados e melhor tomada de decisão.",
+            "Desenhei e otimizei APIs REST e um sistema de gestão de assinaturas com cobrança recorrente, incluindo monitoramento em tempo real de eventos críticos.",
+            "Implementei pipelines de CI/CD com testes automatizados (Jest), aumentando a confiabilidade das releases e reduzindo o tempo de deploy.",
+            "Atuei em um ambiente de startup de ritmo acelerado com metodologias Ágeis/Scrum, promovendo entrega contínua e rápida adaptação à evolução do produto."
+          ]
+        },
+        {
+          "role": "Engenheiro de Software Full Stack",
+          "company": "A7 Credit",
+          "period": "03/2023 – 02/2024",
+          "summary": "Desenvolvi uma plataforma de análise de risco financeiro usando Node.js, Fastify e TypeScript com dashboards em React, automatizei coleta de dados e integrações com APIs financeiras, construí APIs escaláveis com MongoDB e estruturei infraestrutura cloud-native na Azure com Docker e AKS.",
+          "highlights": [
+            "Desenvolvi uma plataforma de análise de risco financeiro para compra de recebíveis usando Node.js, Fastify e TypeScript, com dashboards React para visualização em tempo real de métricas críticas.",
+            "Reduzi o esforço manual de coleta de dados em 60% com a implementação de automações orientadas a eventos e integrações com APIs financeiras externas para cálculo de risco.",
+            "Engenhei e implementei APIs escaláveis integradas ao MongoDB, garantindo alta performance e consistência no processamento de grandes volumes de dados de clientes.",
+            "Estruturei infraestrutura cloud-native na Azure, utilizando Docker para containerização e AKS (Azure Kubernetes Service) para orquestração, garantindo escalabilidade horizontal e alta disponibilidade.",
+            "Otimizei a ingestão de dados externos seguindo princípios de arquitetura moderna, aumentando significativamente a agilidade operacional de analistas de risco."
+          ]
         }
       ]
     },

@@ -38,7 +38,7 @@ export default function ResumePage() {
           </p>
         </div>
 
-        <Button href="/contato" variant="primary">
+        <Button href="/contact" variant="primary">
           {t('resume.page.ctaContact', 'Get in touch')}
         </Button>
       </div>
@@ -87,7 +87,7 @@ export default function ResumePage() {
           </Link>
           <Link
             className="text-sm text-primary/80 underline-offset-4 hover:text-primary hover:underline"
-            href="/contato"
+            href="/contact"
           >
             {t('resume.shortcuts.contact', 'Contact')}
           </Link>

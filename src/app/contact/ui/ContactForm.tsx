@@ -19,7 +19,7 @@ export function ContactForm() {
   })
 
   const mailtoHref = useMemo(() => {
-    const to = t('contact.form.to', 'youremail@example.com')
+    const to = t('contact.form.to', 'gustavojezini@gmail.com')
     const subjectPrefix = t(
       'contact.form.subjectPrefix',
       'Contact via portfolio',

@@ -9,6 +9,8 @@ type ProjectItem = {
   description: string
   tech?: string[]
   href?: string
+  repo?: string
+  deployUrl?: string
 }
 type CertificateItem = { title: string; org: string; href: string }
 type EducationItem = { title: string; subtitle: string; period: string }
@@ -40,6 +42,25 @@ export default function Home() {
     'home.projects.githubBaseUrl',
     'https://github.com/SEU_USUARIO',
   )
+
+  const resolveProjectHref = (p: ProjectItem) => {
+    if (p.href) return p.href
+    if (p.deployUrl) return p.deployUrl
+
+    if (p.repo) {
+      // allow either full URL or "owner/repo" shorthand
+      if (p.repo.startsWith('http://') || p.repo.startsWith('https://')) {
+        return p.repo
+      }
+      const base = typeof githubBaseUrl === 'string' ? githubBaseUrl : ''
+      const normalizedBase = base.endsWith('/') ? base.slice(0, -1) : base
+      return `${normalizedBase}/${p.repo.replace(/^\//, '')}`
+    }
+
+    return typeof githubBaseUrl === 'string'
+      ? githubBaseUrl
+      : 'https://github.com/SEU_USUARIO'
+  }
 
   return (
     <div>
@@ -73,7 +94,7 @@ export default function Home() {
                 {t('home.hero.cta.projects', 'See projects')}
               </a>
               <a
-                href="/contato"
+                href="/contact"
                 className="inline-flex h-11 items-center justify-center rounded-md bg-accent px-4 text-sm font-medium text-primary transition hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
                 {t('home.hero.cta.contact', 'Get in touch')}
@@ -158,7 +179,7 @@ export default function Home() {
             {projects.map((p, idx) => (
               <a
                 key={`${p.title}-${idx}`}
-                href={p.href ?? githubBaseUrl}
+                href={resolveProjectHref(p)}
                 target="_blank"
                 rel="noreferrer"
                 className="group flex flex-col gap-4 rounded-xl border border-accent/40 bg-background/50 p-5 transition hover:border-primary/40 hover:bg-background/70"
@@ -295,7 +316,7 @@ export default function Home() {
               </p>
             </div>
             <a
-              href="/contato"
+              href="/contact"
               className="mt-4 inline-flex h-11 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-background transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 sm:mt-0"
             >
               {t('home.contact.cta', 'Open contact form')}

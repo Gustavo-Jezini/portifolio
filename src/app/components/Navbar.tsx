@@ -24,7 +24,7 @@ export function Navbar() {
         <nav className="flex items-center gap-2">
           <NavLink href="/">{t('nav.home', 'Home')}</NavLink>
           <NavLink href="/resume">{t('nav.resume', 'Resume')}</NavLink>
-          <NavLink href="/contato">{t('nav.contact', 'Contact')}</NavLink>
+          <NavLink href="/contact">{t('nav.contact', 'Contact')}</NavLink>
 
           <div
             className="relative inline-flex rounded-full border border-accent/50 bg-accent/15 p-0.5 text-sm"
