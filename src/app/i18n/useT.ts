@@ -23,7 +23,20 @@ export function useT() {
     throw new Error('useT must be used inside <I18nProvider>')
   }
 
-  const t = (key: string, fallback?: string) => {
+  /**
+   * Generic translator that returns the raw value from the dictionary.
+   * - If the path points to a string, returns a string.
+   * - If it points to an array/object, returns that value.
+   * - If it's missing, returns the provided fallback (if any) or the key.
+   */
+  const t = <T = unknown>(key: string, fallback?: T) => {
+    const value = getByPath(ctx.messages, key) as T | undefined
+    if (value !== undefined) return value
+    return fallback ?? (key as unknown as T)
+  }
+
+  /** String-only helper (most common for UI text). */
+  const ts = (key: string, fallback?: string) => {
     const value = getByPath(ctx.messages, key)
     if (typeof value === 'string') return value
     return fallback ?? key
@@ -31,6 +44,7 @@ export function useT() {
 
   return {
     t,
+    ts,
     locale: ctx.locale,
     setLocale: ctx.setLocale,
   }

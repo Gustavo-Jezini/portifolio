@@ -1,6 +1,10 @@
 {
   "app": {
-    "name": "Gustavo Jezini"
+    "name": "Gustavo Jezini",
+    "meta": {
+      "title": "Gustavo Jezini - Portfolio",
+      "description": "Gustavo Jezini portfolio"
+    }
   },
   "nav": {
     "home": "Home",
@@ -14,6 +18,198 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "contact": "Get in touch"
+    "contact": "Get in touch",
+    "social": {
+      "linkedin": "LinkedIn"
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Developer",
+      "title": "Hi, I'm Gustavo.",
+      "subtitle": "Full Stack Software Engineer with 4+ years of experience.",
+      "description": "I design and implement scalable systems across financial and e-commerce domains, with a strong focus on automation, cloud-native architecture, and CI/CD.",
+      "cta": {
+        "projects": "See projects",
+        "contact": "Get in touch"
+      },
+      "highlights": {
+        "title": "Highlights",
+        "items": [
+          "Node.js (Express, NestJS, Fastify) + TypeScript",
+          "React + Next.js",
+          "MongoDB + PostgreSQL, Docker, CI/CD (GitHub Actions)"
+        ],
+        "note": ""
+      }
+    },
+    "about": {
+      "kicker": "About",
+      "title": "A bit about me",
+      "description": "Full Stack Software Engineer with 4+ years of experience in the Node.js ecosystem (Express, NestJS, Fastify) and React / Next.js, specializing in Cloud-Native architectures (Azure/AWS) and CI/CD workflows using GitHub Actions.",
+      "cards": [
+        {
+          "title": "Architecture & migrations",
+          "desc": "Led the migration of an EJS-based monolith into a decoupled NestJS + React architecture with Docker containerization to improve maintainability and scalability."
+        },
+        {
+          "title": "Automation & efficiency",
+          "desc": "Automated workflows and data collection, achieving up to 100% reduction in manual effort and 60% gains in operational efficiency."
+        },
+        {
+          "title": "Data-driven delivery",
+          "desc": "Built SQL-driven dashboards and real-time metrics to support data-driven decision making for e-commerce and financial use cases."
+        }
+      ]
+    },
+    "projects": {
+      "kicker": "Projects",
+      "title": "Some things I've built",
+      "description": "A few selected projects from my recent work.",
+      "repoCta": "View repository →",
+      "itemFallbackTitle": "Project",
+      "itemFallbackDescription": "",
+      "githubBaseUrl": "https://github.com/gustavo-jezini",
+      "items": [
+        {
+          "title": "USA Stock Market",
+          "description": "Project to monitor U.S. stock market assets and generate automated emails with financial news from the Finnhub.io API, using Inngest for workflows and Gemini for AI-generated email content.",
+          "repo": "stock-tracker",
+          "tech": ["Next.js", "MongoDB", "Mongoose", "Better Auth", "Finnhub API", "Inngest", "Gemini API", "Nodemailer"]
+        },
+        {
+          "title": "Sports Socket",
+          "description": "Node.js API focused on real-time sports match updates using WebSockets as the main event channel and REST where synchronous request/response makes sense (bootstrap, listing, and creating matches).",
+          "repo": "sports-socket",
+          "tech": ["Node.js", "WebSocket", "REST", "PostgreSQL", "Drizzle ORM", "Zod", "Docker"]
+        },
+        {
+          "title": "AI Resume Analyzer",
+          "description": "Application that analyzes resumes against specific job descriptions, evaluating compatibility and ATS alignment, with a 0–100 score and improvement suggestions.",
+          "repo": "ai-resume-analyzer",
+          "tech": ["React", "React Router", "Puter.js", "AI"]
+        },
+        {
+          "title": "AI Agents",
+          "description": "AI agent that answers questions based on data stored in a vector database: it transcribes audio, splits it into chunks, generates embeddings per chunk, stores them with a classId, and retrieves the most relevant context to answer questions about a specific lesson or recorded class.",
+          "repo": "ai-agents",
+          "tech": ["Fastify", "PostgreSQL", "Drizzle ORM", "Vector database", "Docker", "Zod"]
+        }
+      ]
+    },
+    "certificates": {
+      "kicker": "Certificates",
+      "title": "Certifications and credentials",
+      "description": "Selected certifications and specializations.",
+      "cta": "View credential →",
+      "items": [
+        { "title": "English", "org": "Cambly", "href": "http://www.cambly.com/en/certificate/verify/f7cfb464" },
+        { "title": "Generative AI with AWS", "org": "AWS + Trybe", "href": "https://www.betrybe.com/badges/4A2FD70CBC59" },
+        { "title": "AI Agents with Gemini", "org": "Rocketseat", "href": "https://app.rocketseat.com.br/certificates/8d76eeeb-378d-41c9-97e3-051a413d4555" },
+        { "title": "Full Stack Development", "org": "Trybe", "href": "https://www.credential.net/ef10b27a-6a50-4a17-acc6-ca7efb4fc009#acc.3fWV8Ghr" }
+      ]
+    },
+    "education": {
+      "kicker": "Education",
+      "title": "Education and courses",
+      "description": "Academic background and training.",
+      "items": [
+        {
+          "title": "Univesp",
+          "subtitle": "Bachelor’s Degree in Information Technology",
+          "period": "2024 — 2026"
+        },
+        {
+          "title": "Trybe",
+          "subtitle": "Software Development",
+          "period": "2021 — 2022"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let's talk?",
+      "description": "If you have a role or project, reach out.",
+      "emailLabel": "Email",
+      "emailValue": "gustavojezini@gmail.com",
+      "cta": "Open contact form"
+    }
+  },
+  "contact": {
+    "page": {
+      "kicker": "Contact",
+      "title": "Send me a message",
+      "description": "This form opens your email client with prefilled content (no backend)."
+    },
+    "form": {
+      "to": "gustavojezini@gmail.com",
+      "subjectPrefix": "Contact via portfolio",
+      "anonymous": "Anonymous",
+      "fields": {
+        "name": { "label": "Name", "placeholder": "Your name" },
+        "email": { "label": "Email", "placeholder": "you@example.com" },
+        "message": { "label": "Message", "placeholder": "How can I help?" }
+      },
+      "actions": {
+        "submit": "Send email",
+        "openClient": "Open in email client"
+      },
+      "hint": "Tip: change the destination address in `ContactForm.tsx`."
+    }
+  },
+  "resume": {
+    "page": {
+      "kicker": "Resume",
+      "title": "Experience",
+      "description": "Timeline similar to LinkedIn. Edit the entries to match your journey.",
+      "ctaContact": "Get in touch"
+    },
+    "experience": {
+      "items": [
+        {
+          "role": "Back-end Software Developer",
+          "company": "Sossego",
+          "period": "Current Job",
+          "summary": "Developed and optimized automation bots, architected event-driven workflows consuming GraphQL APIs, integrated Python microservices to reconcile data across MongoDB and PostgreSQL, and implemented CI/CD pipelines with GitHub Actions.",
+          "highlights": [
+            "Developed and optimized automation bots using Node.js and Playwright, eliminating 100% of manual web data collection effort.",
+            "Architected event-driven workflows consuming GraphQL APIs to trigger core business processes in real-time.",
+            "Integrated Python microservices and DAGs to reconcile data between MongoDB and PostgreSQL, ensuring full system consistency.",
+            "Implemented CI/CD pipelines with GitHub Actions for code validation and continuous deployment, structuring Pull Request workflows with mandatory reviews and quality control.",
+            "Leveraged GitHub Copilot as a productivity tool for development and code review processes."
+          ]
+        },
+        {
+          "role": "Full Stack Software Developer",
+          "company": "Avantsoft",
+          "period": "04/2024 – 02/2025",
+          "summary": "Led the migration of an EJS-based monolith to a cloud-ready architecture using NestJS and React with Docker containerization, built SQL-based dashboards with real-time product metrics, and designed REST APIs including recurring billing and critical event monitoring.",
+          "highlights": [
+            "Led the migration of an EJS based monolith to a cloud-ready architecture using NestJS and React with Docker containerization, streamlining deployment and increasing horizontal scalability.",
+            "Structured SQL based analytical dashboards with real time product metrics, enabling data-driven financial insights and improved decision making.",
+            "Designed and optimized REST APIs and a subscription management system with recurring billing, including real-time monitoring of critical events.",
+            "Implemented CI/CD pipelines with automated testing (Jest), increasing release reliability and reducing deployment time.",
+            "Operated in a fast-paced startup environment using Agile/Scrum methodologies, promoting continuous delivery and rapid adaptation to product evolution."
+          ]
+        },
+        {
+          "role": "Full Stack Software Engineer",
+          "company": "A7 Credit",
+          "period": "03/2023 – 02/2024",
+          "summary": "Developed a financial risk analysis platform using Node.js, Fastify, and TypeScript with React dashboards, automated data collection and integrations with financial APIs, built scalable APIs with MongoDB, and structured cloud-native infrastructure on Azure with Docker and AKS.",
+          "highlights": [
+            "Developed a financial risk analysis platform for receivables purchasing using Node.js, Fastify, and TypeScript, with React dashboards for real-time critical metrics visualization.",
+            "Reduced manual data collection effort by 60% through the implementation of event-driven automations and integrations with external financial APIs for risk calculation.",
+            "Engineered and implemented scalable APIs integrated with MongoDB, ensuring high performance and consistency in processing high volumes of customer data.",
+            "Structured cloud-native infrastructure on Azure, utilizing Docker for containerization and AKS (Azure Kubernetes Service) for orchestration, ensuring horizontal scalability and high availability.",
+            "Optimized external data ingestion following modern architecture principles, significantly increasing the operational agility of risk analysts."
+          ]
+        }
+      ]
+    },
+    "shortcuts": {
+      "title": "Shortcuts",
+      "projects": "See projects",
+      "contact": "Contact"
+    }
   }
 }

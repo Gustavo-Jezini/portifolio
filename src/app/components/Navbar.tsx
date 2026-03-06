@@ -9,10 +9,9 @@ import { type Locale } from '../i18n/i18n'
 export function Navbar() {
   const { t, locale, setLocale } = useT()
 
-  const toggleLocale = () => {
-    const next: Locale = locale === 'en' ? 'pt' : 'en'
-    console.log('[i18n] toggleLocale', { from: locale, to: next })
-    setLocale(next)
+  const labels: Record<Locale, string> = {
+    en: t('nav.language.en', 'EN'),
+    pt: t('nav.language.pt', 'PT'),
   }
 
   return (
@@ -25,19 +24,34 @@ export function Navbar() {
         <nav className="flex items-center gap-2">
           <NavLink href="/">{t('nav.home', 'Home')}</NavLink>
           <NavLink href="/resume">{t('nav.resume', 'Resume')}</NavLink>
-          <NavLink href="/contato">{t('nav.contact', 'Contact')}</NavLink>
+          <NavLink href="/contact">{t('nav.contact', 'Contact')}</NavLink>
 
-          <button
-            type="button"
-            onClick={toggleLocale}
-            className="rounded-md px-3 py-2 text-sm font-medium text-primary/80 transition hover:bg-accent/30 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+          <div
+            className="relative inline-flex rounded-full border border-accent/50 bg-accent/15 p-0.5 text-sm"
+            role="group"
             aria-label={t('nav.language.label', 'Language')}
             title={t('nav.language.label', 'Language')}
           >
-            {locale === 'en'
-              ? t('nav.language.pt', 'PT')
-              : t('nav.language.en', 'EN')}
-          </button>
+            {(Object.keys(labels) as Locale[]).map((l) => {
+              const active = l === locale
+              return (
+                <button
+                  key={l}
+                  type="button"
+                  onClick={() => setLocale(l)}
+                  aria-pressed={active}
+                  className={
+                    'inline-flex items-center justify-center rounded-full px-2.5 py-1 font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 ' +
+                    (active
+                      ? 'bg-background text-primary shadow-sm'
+                      : 'text-primary/70 hover:bg-accent/30 hover:text-primary')
+                  }
+                >
+                  {labels[l]}
+                </button>
+              )
+            })}
+          </div>
         </nav>
       </div>
     </header>
