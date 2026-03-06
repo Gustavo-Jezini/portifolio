@@ -1,6 +1,10 @@
 {
   "app": {
-    "name": "Gustavo Jezini"
+    "name": "Gustavo Jezini",
+    "meta": {
+      "title": "Gustavo Jezini - Portifólio",
+      "description": "Portifólio de Gustavo Jezini"
+    }
   },
   "nav": {
     "home": "Início",
@@ -14,6 +18,181 @@
   },
   "footer": {
     "rights": "Todos os direitos reservados.",
-    "contact": "Entrar em contato"
+    "contact": "Entrar em contato",
+    "social": {
+      "linkedin": "LinkedIn"
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Desenvolvedor",
+      "title": "Olá, eu sou o Gustavo.",
+      "subtitle": "Eu construo experiências web com foco em performance e UX.",
+      "description": "Aqui você encontra um resumo dos meus projetos, certificados e experiência profissional. Sinta-se à vontade para entrar em contato.",
+      "cta": {
+        "projects": "Ver projetos",
+        "contact": "Entrar em contato"
+      },
+      "highlights": {
+        "title": "Destaques",
+        "items": [
+          "Next.js + React + TypeScript",
+          "Tailwind, design system leve e consistente",
+          "Integrações com APIs, auth e banco de dados"
+        ],
+        "note": "(Edite este bloco para colocar suas especialidades reais.)"
+      }
+    },
+    "about": {
+      "kicker": "Sobre mim",
+      "title": "Um pouco da minha história",
+      "description": "Escreva aqui uma breve descrição: como você começou na área, em que tipo de projeto gosta de atuar e quais valores guiam seu trabalho.",
+      "cards": [
+        {
+          "title": "Foco em produto",
+          "desc": "Participo do processo do problema à entrega, validando com usuários e stakeholders."
+        },
+        {
+          "title": "Qualidade",
+          "desc": "Boas práticas, lint, testes e revisão para manter o código legível."
+        },
+        {
+          "title": "Aprendizado contínuo",
+          "desc": "Sempre estudando para escrever código melhor e acompanhar o ecossistema."
+        }
+      ]
+    },
+    "projects": {
+      "kicker": "Projetos",
+      "title": "Alguns projetos que eu construí",
+      "description": "É um grid com 6 cards. Troque o título, descrição, tecnologias e links.",
+      "repoCta": "Ver repositório →",
+  "itemFallbackTitle": "Projeto",
+  "itemFallbackDescription": "Descreva o problema, sua solução e o resultado.",
+      "githubBaseUrl": "https://github.com/SEU_USUARIO",
+      "items": [
+        {
+          "title": "Projeto 1",
+          "description": "Descreva o problema, sua solução e o resultado.",
+          "tech": ["Next.js", "TypeScript", "Tailwind"]
+        },
+        {
+          "title": "Projeto 2",
+          "description": "Descreva o problema, sua solução e o resultado.",
+          "tech": ["React", "Node.js", "Express"]
+        },
+        {
+          "title": "Projeto 3",
+          "description": "Descreva o problema, sua solução e o resultado.",
+          "tech": ["TypeScript", "PostgreSQL", "Prisma"]
+        },
+        {
+          "title": "Projeto 4",
+          "description": "Descreva o problema, sua solução e o resultado.",
+          "tech": ["Next.js", "Auth", "API"]
+        },
+        {
+          "title": "Projeto 5",
+          "description": "Descreva o problema, sua solução e o resultado.",
+          "tech": ["UI", "Design", "Acessibilidade"]
+        },
+        {
+          "title": "Projeto 6",
+          "description": "Descreva o problema, sua solução e o resultado.",
+          "tech": ["CI", "Testes", "Deploy"]
+        }
+      ]
+    },
+    "certificates": {
+      "kicker": "Certificados",
+      "title": "Certificações e credenciais",
+      "description": "Adicione links para as credenciais (Alura, Coursera, Rocketseat, etc.).",
+      "cta": "Ver credencial →",
+      "items": [
+        { "title": "Certificado 1", "org": "Instituição", "href": "https://www.your-credential-link.com" },
+        { "title": "Certificado 2", "org": "Instituição", "href": "https://www.your-credential-link.com" },
+        { "title": "Certificado 3", "org": "Instituição", "href": "https://www.your-credential-link.com" },
+        { "title": "Certificado 4", "org": "Instituição", "href": "https://www.your-credential-link.com" }
+      ]
+    },
+    "education": {
+      "kicker": "Educação",
+      "title": "Formação acadêmica e cursos",
+      "description": "Mostre sua faculdade e um curso relevante. Você pode adicionar mais entradas quando quiser.",
+      "items": [
+        {
+          "title": "Faculdade",
+          "subtitle": "Nome do curso • Nome da instituição",
+          "period": "2022 — 2026"
+        },
+        {
+          "title": "Curso",
+          "subtitle": "Nome do curso • Plataforma",
+          "period": "Carga horária / Ano"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Vamos conversar?",
+      "description": "Se você tem uma vaga, freelas ou quer discutir um projeto, me chama.",
+      "emailLabel": "Email",
+      "emailValue": "seuemail@exemplo.com",
+      "cta": "Ir para o formulário"
+    }
+  },
+  "contact": {
+    "page": {
+      "kicker": "Contato",
+      "title": "Me envie uma mensagem",
+      "description": "Este formulário abre seu cliente de email com os dados preenchidos (sem backend)."
+    },
+    "form": {
+      "to": "seuemail@exemplo.com",
+      "subjectPrefix": "Contato via portfólio",
+      "anonymous": "Anônimo",
+      "fields": {
+        "name": { "label": "Nome", "placeholder": "Seu nome" },
+        "email": { "label": "Email", "placeholder": "voce@exemplo.com" },
+        "message": { "label": "Mensagem", "placeholder": "Como posso te ajudar?" }
+      },
+      "actions": {
+        "submit": "Enviar email",
+        "openClient": "Abrir no cliente de email"
+      },
+      "hint": "Dica: troque o endereço de destino em `ContactForm.tsx`."
+    }
+  },
+  "resume": {
+    "page": {
+      "kicker": "Currículo",
+      "title": "Experiências",
+      "description": "Timeline em formato parecido com o LinkedIn. Edite os itens para refletir sua trajetória.",
+      "ctaContact": "Entrar em contato"
+    },
+    "experience": {
+      "items": [
+        {
+          "role": "Cargo / Função",
+          "company": "Empresa",
+          "period": "2024 — Atual",
+          "summary": "Descreva aqui o que você faz, o contexto do produto e o impacto do seu trabalho.",
+          "highlights": [
+            "Resultados mensuráveis (ex: -20% tempo de carregamento, +15% conversão)",
+            "Tecnologias, responsabilidades, colaboração"
+          ]
+        },
+        {
+          "role": "Cargo anterior",
+          "company": "Empresa",
+          "period": "2022 — 2024",
+          "summary": "Descreva o escopo: time, projeto, problemas resolvidos e o que você aprendeu."
+        }
+      ]
+    },
+    "shortcuts": {
+      "title": "Atalhos",
+      "projects": "Ver projetos",
+      "contact": "Contato"
+    }
   }
 }

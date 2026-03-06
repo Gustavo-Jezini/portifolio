@@ -38,14 +38,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     setClientLocale(locale)
   }, [locale])
 
-  const setLocale = useCallback(
-    (next: Locale) => {
-      console.log('[i18n] setLocale', { from: locale, to: next })
-      setLocaleState(next)
-      setClientLocale(next)
-    },
-    [locale],
-  )
+  const setLocale = useCallback((next: Locale) => {
+    setLocaleState(next)
+    setClientLocale(next)
+  }, [])
 
   const value = useMemo<I18nContextValue>(() => {
     return {

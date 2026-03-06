@@ -1,6 +1,10 @@
 {
   "app": {
-    "name": "Gustavo Jezini"
+    "name": "Gustavo Jezini",
+    "meta": {
+      "title": "Gustavo Jezini - Portfolio",
+      "description": "Gustavo Jezini portfolio"
+    }
   },
   "nav": {
     "home": "Home",
@@ -14,6 +18,181 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "contact": "Get in touch"
+    "contact": "Get in touch",
+    "social": {
+      "linkedin": "LinkedIn"
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Developer",
+      "title": "Hi, I'm Gustavo.",
+      "subtitle": "I build web experiences focused on performance and UX.",
+      "description": "Here you'll find a summary of my projects, certificates and professional experience. Feel free to reach out.",
+      "cta": {
+        "projects": "See projects",
+        "contact": "Get in touch"
+      },
+      "highlights": {
+        "title": "Highlights",
+        "items": [
+          "Next.js + React + TypeScript",
+          "Tailwind, lightweight and consistent design system",
+          "API integrations, auth and databases"
+        ],
+        "note": "(Edit this block to match your real strengths.)"
+      }
+    },
+    "about": {
+      "kicker": "About",
+      "title": "A bit about me",
+      "description": "Write a short bio: how you started, what kind of work you like, and what values guide your craft.",
+      "cards": [
+        {
+          "title": "Product mindset",
+          "desc": "I join the process from problem to delivery, validating with users and stakeholders."
+        },
+        {
+          "title": "Quality",
+          "desc": "Best practices, linting, tests and reviews to keep code readable."
+        },
+        {
+          "title": "Continuous learning",
+          "desc": "Always studying to write better code and keep up with the ecosystem."
+        }
+      ]
+    },
+    "projects": {
+      "kicker": "Projects",
+      "title": "Some things I've built",
+      "description": "This is a grid with 6 cards. Replace title, description, tech and links.",
+      "repoCta": "View repository →",
+  "itemFallbackTitle": "Project",
+  "itemFallbackDescription": "Describe the problem, your solution and the outcome.",
+      "githubBaseUrl": "https://github.com/YOUR_USER",
+      "items": [
+        {
+          "title": "Project 1",
+          "description": "Describe the problem, your solution and the outcome.",
+          "tech": ["Next.js", "TypeScript", "Tailwind"]
+        },
+        {
+          "title": "Project 2",
+          "description": "Describe the problem, your solution and the outcome.",
+          "tech": ["React", "Node.js", "Express"]
+        },
+        {
+          "title": "Project 3",
+          "description": "Describe the problem, your solution and the outcome.",
+          "tech": ["TypeScript", "PostgreSQL", "Prisma"]
+        },
+        {
+          "title": "Project 4",
+          "description": "Describe the problem, your solution and the outcome.",
+          "tech": ["Next.js", "Auth", "API"]
+        },
+        {
+          "title": "Project 5",
+          "description": "Describe the problem, your solution and the outcome.",
+          "tech": ["UI", "Design", "Accessibility"]
+        },
+        {
+          "title": "Project 6",
+          "description": "Describe the problem, your solution and the outcome.",
+          "tech": ["CI", "Tests", "Deploy"]
+        }
+      ]
+    },
+    "certificates": {
+      "kicker": "Certificates",
+      "title": "Certifications and credentials",
+      "description": "Add links to credentials (Coursera, Alura, etc.).",
+      "cta": "View credential →",
+      "items": [
+        { "title": "Certificate 1", "org": "Organization", "href": "https://www.your-credential-link.com" },
+        { "title": "Certificate 2", "org": "Organization", "href": "https://www.your-credential-link.com" },
+        { "title": "Certificate 3", "org": "Organization", "href": "https://www.your-credential-link.com" },
+        { "title": "Certificate 4", "org": "Organization", "href": "https://www.your-credential-link.com" }
+      ]
+    },
+    "education": {
+      "kicker": "Education",
+      "title": "Education and courses",
+      "description": "Show your degree and a relevant course. Add more entries whenever you want.",
+      "items": [
+        {
+          "title": "College",
+          "subtitle": "Course name • Institution",
+          "period": "2022 — 2026"
+        },
+        {
+          "title": "Course",
+          "subtitle": "Course name • Platform",
+          "period": "Hours / Year"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let's talk?",
+      "description": "If you have a role or project, reach out.",
+      "emailLabel": "Email",
+      "emailValue": "youremail@example.com",
+      "cta": "Open contact form"
+    }
+  },
+  "contact": {
+    "page": {
+      "kicker": "Contact",
+      "title": "Send me a message",
+      "description": "This form opens your email client with prefilled content (no backend)."
+    },
+    "form": {
+      "to": "youremail@example.com",
+      "subjectPrefix": "Contact via portfolio",
+      "anonymous": "Anonymous",
+      "fields": {
+        "name": { "label": "Name", "placeholder": "Your name" },
+        "email": { "label": "Email", "placeholder": "you@example.com" },
+        "message": { "label": "Message", "placeholder": "How can I help?" }
+      },
+      "actions": {
+        "submit": "Send email",
+        "openClient": "Open in email client"
+      },
+      "hint": "Tip: change the destination address in `ContactForm.tsx`."
+    }
+  },
+  "resume": {
+    "page": {
+      "kicker": "Resume",
+      "title": "Experience",
+      "description": "Timeline similar to LinkedIn. Edit the entries to match your journey.",
+      "ctaContact": "Get in touch"
+    },
+    "experience": {
+      "items": [
+        {
+          "role": "Role",
+          "company": "Company",
+          "period": "2024 — Present",
+          "summary": "Describe what you do, the product context and the impact of your work.",
+          "highlights": [
+            "Measurable outcomes (ex: -20% load time, +15% conversion)",
+            "Tech, responsibilities, collaboration"
+          ]
+        },
+        {
+          "role": "Previous role",
+          "company": "Company",
+          "period": "2022 — 2024",
+          "summary": "Describe the scope: team, project, problems solved and what you learned."
+        }
+      ]
+    },
+    "shortcuts": {
+      "title": "Shortcuts",
+      "projects": "See projects",
+      "contact": "Contact"
+    }
   }
 }
