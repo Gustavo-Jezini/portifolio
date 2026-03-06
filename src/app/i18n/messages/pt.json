@@ -201,9 +201,17 @@
       "kicker": "Currículo",
       "title": "Experiência",
       "description": "Linha do tempo semelhante ao LinkedIn. Edite as entradas para refletir sua trajetória.",
-      "ctaContact": "Entre em contato"
+      "ctaContact": "Entre em contato",
+      "ctaHint": "Respondo mais rápido pelo LinkedIn ou por e-mail."
+    },
+    "badges": {
+      "remote": "Remoto/Hybrid",
+      "team": "Trabalho em equipe",
+      "ownership": "Ownership"
     },
     "experience": {
+      "title": "Destaques da carreira",
+      "subtitle": "Mais recente primeiro",
       "items": [
         {
           "role": "Desenvolvedor de Software Back-end",
@@ -245,6 +253,12 @@
           ]
         }
       ]
+    },
+    "tips": {
+      "title": "Como eu gero impacto",
+      "item1": "Comunicação clara e documentação que acelera o time.",
+      "item2": "Entrega incremental com qualidade (testes, review e CI).",
+      "item3": "Mentalidade de dono: eu destravo problemas e busco resultado."
     },
     "shortcuts": {
       "title": "Atalhos",
