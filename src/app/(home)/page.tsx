@@ -119,7 +119,7 @@ export default function Home() {
 
   const githubBaseUrl = t(
     'home.projects.githubBaseUrl',
-    'https://github.com/SEU_USUARIO',
+    'https://github.com/gustav-jezini',
   )
 
   const resolveProjectHref = (p: ProjectItem) => {
@@ -138,7 +138,7 @@ export default function Home() {
 
     return typeof githubBaseUrl === 'string'
       ? githubBaseUrl
-      : 'https://github.com/SEU_USUARIO'
+      : 'https://github.com/gustav-jezini'
   }
 
   return (
