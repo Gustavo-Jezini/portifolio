@@ -138,21 +138,43 @@
   "contact": {
     "page": {
       "kicker": "Contact",
-      "title": "Send me a message",
-      "description": "This form opens your email client with prefilled content (no backend)."
+      "title": "Let's talk",
+      "description": "Want to discuss a role, a freelance project, or just say hi? Send a message and I’ll reply as soon as possible.",
+      "cards": {
+        "fastTitle": "Fast context for recruiters",
+        "fastDescription": "Share the position, stack, and location/remote details. I’ll respond with availability and next steps.",
+        "noBackendTitle": "No backend form",
+        "noBackendDescription": "This will open your email client using a pre-filled message (mailto)."
+      }
     },
     "form": {
       "to": "gustavojezini@gmail.com",
       "subjectPrefix": "Contact via portfolio",
       "anonymous": "Anonymous",
+      "title": "Send an email",
+      "subtitle": "This will open your email client with a pre-filled subject and message.",
+      "badge": "Recruiter-friendly",
+      "success": "Message sent! Thanks for reaching out.",
+      "submitError": "Could not send via server. Opening your email client instead. ({error})",
       "fields": {
         "name": { "label": "Name", "placeholder": "Your name" },
         "email": { "label": "Email", "placeholder": "you@example.com" },
         "message": { "label": "Message", "placeholder": "How can I help?" }
       },
       "actions": {
-        "submit": "Send email",
-        "openClient": "Open in email client"
+        "submit": "Send message",
+        "submitting": "Sending…",
+        "openClient": "Preview mailto link",
+        "copyEmail": "Copy email",
+        "copied": "Copied!"
+      },
+      "messageHint": "Tip: include role/company, stack, and timeline.",
+      "validation": {
+        "nameRequired": "Please enter your name.",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "Please enter a valid email.",
+        "messageRequired": "Please write a short message.",
+        "messageMinLength": "A bit more detail helps (min. 20 characters)."
       },
       "hint": "Tip: change the destination address in `ContactForm.tsx`."
     }
