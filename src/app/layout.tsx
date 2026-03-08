@@ -21,6 +21,11 @@ const inconsolata = Inconsolata({
 export const metadata: Metadata = {
   title: en.app.meta.title,
   description: en.app.meta.description,
+  icons: {
+    icon: [{ url: '/Logotipo.svg', type: 'image/svg+xml' }],
+    shortcut: ['/Logotipo.svg'],
+    apple: [{ url: '/Logotipo.svg', type: 'image/svg+xml' }],
+  },
 }
 
 export default function RootLayout({
