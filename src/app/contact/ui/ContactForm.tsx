@@ -27,6 +27,8 @@ export function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
 
   const mailtoHref = useMemo(() => {
     const to = t('contact.form.to', 'gustavojezini@gmail.com')
@@ -104,6 +106,29 @@ export function ContactForm() {
     [form, validate],
   )
 
+  const submitToApi = useCallback(async () => {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(form),
+    })
+
+    const payload = (await res.json().catch(() => null)) as
+      | { ok: true; id?: string }
+      | { ok: false; error?: string }
+      | null
+
+    if (!res.ok || !payload || payload.ok === false) {
+      const errorMessage =
+        payload && 'error' in payload && payload.error
+          ? payload.error
+          : 'Failed to send message.'
+      throw new Error(errorMessage)
+    }
+
+    return payload
+  }, [form])
+
   return (
     <form
       className="space-y-5 rounded-2xl border border-accent/40 bg-background/40 p-6"
@@ -111,25 +136,34 @@ export function ContactForm() {
       onSubmit={(e) => {
         e.preventDefault()
 
+        setSubmitError(null)
+        setSubmitSuccess(false)
+
         const nextErrors = validate(form)
         setErrors(nextErrors)
         if (Object.keys(nextErrors).length > 0) return
 
         setIsSubmitting(true)
-        window.location.href = mailtoHref
-        window.setTimeout(() => setIsSubmitting(false), 400)
+        ;(async () => {
+          try {
+            await submitToApi()
+            setSubmitSuccess(true)
+            setForm({ name: '', email: '', message: '' })
+          } catch (err) {
+            // Fallback: if server-side sending fails, still allow mailto to work.
+            const message = err instanceof Error ? err.message : String(err)
+            setSubmitError(message)
+            window.location.href = mailtoHref
+          } finally {
+            window.setTimeout(() => setIsSubmitting(false), 400)
+          }
+        })()
       }}
     >
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="text-sm font-medium text-primary">
-            {t('contact.form.title', 'Send an email')}
-          </p>
-          <p className="mt-1 text-xs leading-relaxed text-muted">
-            {t(
-              'contact.form.subtitle',
-              'This will open your email client with a pre-filled subject and message.',
-            )}
+            {t('contact.form.title', 'Send a message')}
           </p>
         </div>
 
@@ -239,8 +273,8 @@ export function ContactForm() {
           disabled={!isValid || isSubmitting}
         >
           {isSubmitting
-            ? t('contact.form.actions.submitting', 'Opening…')
-            : t('contact.form.actions.submit', 'Open email draft')}
+            ? t('contact.form.actions.submitting', 'Sending…')
+            : t('contact.form.actions.submit', 'Send message')}
         </Button>
         <a
           href={mailtoHref}
@@ -268,12 +302,20 @@ export function ContactForm() {
         </button>
       </div>
 
-      <p className="text-xs text-muted">
-        {t(
-          'contact.form.hint',
-          'Tip: change the destination address in `ContactForm.tsx`.',
-        )}
-      </p>
+      {submitSuccess ? (
+        <p className="text-xs text-primary">
+          {t('contact.form.success', 'Message sent! Thanks for reaching out.')}
+        </p>
+      ) : null}
+
+      {submitError ? (
+        <p className="text-xs text-secondary">
+          {t(
+            'contact.form.submitError',
+            'Could not send via server. Opening your email client instead. ({error})',
+          ).replace('{error}', submitError)}
+        </p>
+      ) : null}
     </form>
   )
 }

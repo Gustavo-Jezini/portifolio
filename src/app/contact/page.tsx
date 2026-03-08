@@ -40,18 +40,6 @@ export default function ContactPage() {
                   )}
                 </p>
               </div>
-
-              <div className="rounded-2xl border border-accent/40 bg-background/40 p-4">
-                <p className="text-sm font-medium text-primary">
-                  {t('contact.page.cards.noBackendTitle', 'No backend form')}
-                </p>
-                <p className="mt-1 text-sm text-muted">
-                  {t(
-                    'contact.page.cards.noBackendDescription',
-                    'This will open your email client using a pre-filled message (mailto).',
-                  )}
-                </p>
-              </div>
             </div>
           </div>
 

@@ -154,14 +154,16 @@
       "title": "Send an email",
       "subtitle": "This will open your email client with a pre-filled subject and message.",
       "badge": "Recruiter-friendly",
+      "success": "Message sent! Thanks for reaching out.",
+      "submitError": "Could not send via server. Opening your email client instead. ({error})",
       "fields": {
         "name": { "label": "Name", "placeholder": "Your name" },
         "email": { "label": "Email", "placeholder": "you@example.com" },
         "message": { "label": "Message", "placeholder": "How can I help?" }
       },
       "actions": {
-        "submit": "Open email draft",
-        "submitting": "Opening…",
+        "submit": "Send message",
+        "submitting": "Sending…",
         "openClient": "Preview mailto link",
         "copyEmail": "Copy email",
         "copied": "Copied!"
