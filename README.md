@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio — Gustavo Jezini
 
-## Getting Started
+Personal portfolio built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**. It showcases my work and makes it easy to get in touch.
 
-First, run the development server:
+> Current repo branch: `contact`
+
+## ✨ Highlights
+
+- **Home page** with portfolio sections.
+- **Resume** on a dedicated route.
+- **Contact** page with a form + an API endpoint built with a Route Handler.
+- **i18n (PT/EN)** using a provider + JSON message files.
+- Reusable UI components (Button, Card, Badge, Navbar, Footer, etc.).
+
+## 🧱 Tech stack
+
+- **Next.js** (App Router)
+- **React**
+- **TypeScript**
+- **Tailwind CSS** (+ PostCSS)
+- **Prettier**
+
+## 🗂️ Structure (quick overview)
+
+- `src/app/(home)/page.tsx` — Home
+- `src/app/resume/page.tsx` — Resume
+- `src/app/contact/page.tsx` — Contact
+- `src/app/api/contact/route.ts` — Contact API
+- `src/app/i18n/` — provider, hook and messages
+- `src/app/components/` — UI components
+
+## 🧭 Routes
+
+- `/` — Home
+- `/resume` — Resume
+- `/contact` — Contact
+- `/api/contact` — Contact form endpoint
+
+## 🚀 Run locally
+
+### Requirements
+
+- Node.js (recommended: LTS)
+- A package manager: **npm**, **pnpm**, **yarn**, or **bun**
+
+### Install & start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Defined in `package.json`:
 
-## Learn More
+- `dev` — run the dev server (`next dev`)
+- `build` — production build (`next build`)
+- `start` — run the production server (`next start`)
+- `lint` — lint (`next lint`)
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Internationalization (i18n)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Message files:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `src/app/i18n/messages/pt.json`
+- `src/app/i18n/messages/en.json`
 
-## Deploy on Vercel
+Provider/hook live under `src/app/i18n/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📨 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The contact form is in `src/app/contact/ui/ContactForm.tsx` and calls:
+
+- `src/app/api/contact/route.ts`
+
+This project includes **Resend** as a dependency, so the API route can be wired to send emails.
+
+Keep secrets in environment variables and **never** commit `.env`.
+
+## 🧩 Components
+
+Main components are in `src/app/components/`:
+
+- `Navbar`, `Footer`, `Section`
+- `Button`, `Card`, `Badge`
+- `cn.ts` utility (className helper)
+
+## ☁️ Deploy
+
+Recommended: **Vercel** (best fit for Next.js).
+
+Typical steps:
+
+1. Import the repository into Vercel
+2. Add environment variables (if any)
+3. Deploy
+
+## 📄 License
+
+Personal use. Feel free to reuse the structure/components, but please don’t copy the text/branding without permission.
