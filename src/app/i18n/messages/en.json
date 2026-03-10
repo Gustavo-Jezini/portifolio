@@ -25,21 +25,25 @@
   },
   "home": {
     "hero": {
-      "kicker": "Developer",
-      "available": "Open to opportunities",
+      "kicker": "Software Engineer",
       "title": "Hi, I'm Gustavo.",
-      "subtitle": "Full Stack Software Engineer with 4+ years of experience.",
-      "description": "I design and implement scalable systems across financial and e-commerce domains, with a strong focus on automation, cloud-native architecture, and CI/CD.",
+      "subtitle": "Full Stack Software Engineer focused on Backend, AI, and Automation.",
+      "description": "I design and build scalable systems using Node.js and cloud-native architecture. I have experience developing AI-powered products, complex automations, and data pipelines, as well as modern web applications for fintech, e-commerce, and internal tools.",
+      "available": "Open to opportunities",
       "cta": {
-        "projects": "See projects",
+        "projects": "View projects",
         "contact": "Get in touch"
       },
       "highlights": {
-        "title": "Highlights",
+        "title": "Specialties",
         "items": [
-          "Node.js (Express, NestJS, Fastify) + TypeScript",
-          "React + Next.js",
-          "MongoDB + PostgreSQL, Docker, CI/CD (GitHub Actions)"
+          "Node.js (NestJS, Express, Fastify) + TypeScript",
+          "React, Next.js, and modern full-stack architecture",
+          "AI integrations (LLMs, agents, RAG, automations)",
+          "WebSockets and real-time systems",
+          "PostgreSQL, MySQL, MongoDB, and Redis",
+          "Docker, CI/CD, and cloud infrastructure (AWS EC2, S3)",
+          "Automation with N8N and API integrations"
         ],
         "note": ""
       }
@@ -47,25 +51,37 @@
     "about": {
       "kicker": "About",
       "title": "A bit about me",
-      "description": "Full Stack Software Engineer with 4+ years of experience in the Node.js ecosystem (Express, NestJS, Fastify) and React / Next.js, specializing in Cloud-Native architectures (Azure/AWS) and CI/CD workflows using GitHub Actions.",
+      "description": "I'm a Full Stack Software Engineer with over 4 years of experience building scalable web applications using Node.js and React / Next.js. My work focuses on backend development, automation, and cloud-native architecture, and I also have experience integrating AI into products by building intelligent agents, data pipelines, and systems that automate complex workflows.",
       "cards": [
         {
-          "title": "Architecture & migrations",
-          "desc": "Led the migration of an EJS-based monolith into a decoupled NestJS + React architecture with Docker containerization to improve maintainability and scalability."
+          "title": "Scalable architecture",
+          "desc": "Designed and implemented modern architectures using Node.js, NestJS, and React, including migrating monolithic applications to decoupled systems with Docker containerization and cloud infrastructure."
         },
         {
-          "title": "Automation & efficiency",
-          "desc": "Automated workflows and data collection, achieving up to 100% reduction in manual effort and 60% gains in operational efficiency."
+          "title": "AI-powered products",
+          "desc": "Built solutions using AI such as context-aware agents (RAG), LLM-based resume analysis, and systems that transform large volumes of data into useful insights for users."
         },
         {
-          "title": "Data-driven delivery",
-          "desc": "Built SQL-driven dashboards and real-time metrics to support data-driven decision making for e-commerce and financial use cases."
+          "title": "Process automation",
+          "desc": "Developed automation workflows using N8N, APIs, and integrations with services like Telegram and Notion to eliminate manual tasks and create automated data and notification pipelines."
+        },
+        {
+          "title": "Real-time systems",
+          "desc": "Implemented systems using WebSockets to stream real-time data, enabling instant updates and live information delivery in web applications."
+        },
+        {
+          "title": "Infrastructure & DevOps",
+          "desc": "Experience with Docker, CI/CD pipelines using GitHub Actions, and cloud deployments on AWS (EC2 and S3), ensuring reliable delivery pipelines and reproducible environments."
+        },
+        {
+          "title": "Data & performance",
+          "desc": "Worked with relational and NoSQL databases such as PostgreSQL, MySQL, and MongoDB, as well as Redis for caching and performance optimization in data-intensive applications."
         }
       ]
     },
     "projects": {
       "kicker": "Projects",
-      "title": "Some things I've built",
+      "title": "Selected Engineering Work",
       "description": "A few selected projects from my recent work.",
       "repoCta": "View repository →",
       "itemFallbackTitle": "Project",
